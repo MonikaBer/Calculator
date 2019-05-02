@@ -1,0 +1,36 @@
+.root {
+	-fx-background-color: #444444;
+}
+
+.history {
+	-fx-background-color: #00e6e6;
+}
+
+.current {
+	-fx-background-color: #99ffff;
+}
+
+.numButton {
+	-fx-background-color: white;
+	-fx-font-size: 20;
+}
+
+.opButton {
+	-fx-background-color: #809fff;
+	-fx-font-size: 20;
+}
+
+.otherButton {
+	-fx-background-color: #ffad33;
+	-fx-font-size: 20;
+}
+
+.eqButton {
+	-fx-background-color: #ffff4d;
+	-fx-font-size: 20;
+}
+
+.memoryButton {
+	-fx-background-color: #ffff99;
+	-fx-font-size: 20;
+}
