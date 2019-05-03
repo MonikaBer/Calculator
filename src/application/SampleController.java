@@ -1,12 +1,9 @@
 package application;
 
-import java.util.List;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import jdk.jshell.JShell;
-import jdk.jshell.SnippetEvent;
 import javafx.scene.control.Button;
 
 
@@ -114,7 +111,7 @@ public class SampleController {
 			cache.setText(cache.getText() + " = " + output.getText());
 			
 			snippet = cache.getText();
-			List<SnippetEvent> events = jshell.eval(snippet);
+			jshell.eval(snippet);
 		}
 			
 		operator = "";
@@ -138,12 +135,12 @@ public class SampleController {
 				cache.setText(cache.getText() + " " + operator + " = " + output.getText());
 				
 				snippet = cache.getText();
-				List<SnippetEvent> events = jshell.eval(snippet);
+				jshell.eval(snippet);
 			}
 		} else {
 			temp = String.valueOf(model.calculateBinaryOp(a, Double.parseDouble(output.getText()), operator)); 
 			snippet = cache.getText() + " = " + temp;
-			List<SnippetEvent> events = jshell.eval(snippet);
+			jshell.eval(snippet);
 			
 			operator = value;
 			a = Double.parseDouble(temp);
@@ -151,7 +148,7 @@ public class SampleController {
 			cache.setText(temp + " " + operator + " = " + output.getText());
 			
 			snippet = cache.getText();
-			events = jshell.eval(snippet);
+			jshell.eval(snippet);
 		}
 	
 		operator = "";
